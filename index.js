@@ -42,7 +42,7 @@ Rewriter.prototype = {
             }
 
             this.rules.push({
-                from: new RegExp(rule.from),
+                from: new RegExp(rule.from, rule.flags || ''),
                 to: rule.to,
                 redirect: rule.redirect
             });
